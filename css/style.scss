@@ -1,0 +1,222 @@
+@import "./variables";
+@import "./inheritance";
+
+body {
+    @extend %font1;
+    @extend %bgc1;
+    margin: 0 auto;
+}
+
+header {
+    color: $color1;
+    @extend %bgc3;
+    padding: 100px 60px;
+    text-align: center;
+
+    @media (max-width: 500px) {
+        padding: 60px 10px;
+    }
+}
+
+#about {
+    padding: 100px 60px;
+
+    @media (max-width: 500px) {
+        padding: 60px 10px;
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+        margin: 30px;
+
+        @media (max-width: 500px) {
+            margin: 5px;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+table {
+    font-size: 20px;
+
+    @media (max-width: 500px) {
+        font-size: 16px;
+    }
+}
+
+#portfolio {
+    @extend %bgc2;
+    padding: 100px 30px;
+    font-size: 18px;
+    color: $color3;
+
+    center {
+        padding: 30px;
+        color: $color1;
+    }
+
+    @media (max-width: 500px) {
+        padding: 80px 10px;
+    }
+}
+
+#contact {
+    @extend %bgc1;
+    padding: 100px 50px;
+
+    @media (max-width: 500px) {
+        padding: 80px 20px;
+    }
+}
+
+#blog-list {
+    @extend %bgc1;
+    padding: 50px 30px;
+}
+
+footer {
+    @extend %font2;
+    @extend %bgc2;
+    color: $color1;
+    padding: 50px 40px;
+    font-weight: bold;
+
+    a {
+        color: $color1;
+        text-decoration: none;
+
+        &:hover {
+            color: $color5;
+            text-decoration: none;
+        }
+    }
+
+    @media (max-width: 500px) {
+        padding: 50px 20px;
+    }
+}
+
+#skills {
+    @extend %bgc3;
+    padding: 100px 0;
+    color: $color1;
+
+    @media (max-width: 500px) {
+        padding: 80px 0;
+    }
+
+    h2 {
+        font-weight: bold;
+    }
+
+    p {
+        font-weight: bold;
+        @extend %font2;
+    }
+
+    i {
+        font-weight: bold;
+        font-style: italic;
+        float: right;
+        @extend %font2;
+    }
+}
+
+h2 {
+    text-align: center;
+}
+
+article {
+    padding: 50px 40px;
+
+    @media (max-width: 500px) {
+        padding: 50px 20px;
+    }
+
+    p {
+        @extend %font2;
+        font-weight: 500;
+    }
+
+    p.special {
+        color: $color2;
+    }
+
+    h4 {
+        font-weight: bold;
+    }
+
+    img {
+        width: 80%;
+    }
+
+    
+    span[data-descr] {
+        position: relative;
+        text-decoration: underline;
+        color: $color6;
+        cursor: help;
+    }
+
+    span[data-descr]:hover::after {
+        content: attr(data-descr);
+        position: absolute;
+        left: 0;
+        top: 24px;
+        min-width: 200px;
+        border: 1px $color4 solid;
+        border-radius: 10px;
+        background-color: $color1;
+        padding: 12px;
+        color: $color3;
+        font-size: 14px;
+        z-index: 1;
+    }
+}
+
+.card-body {
+    p {
+        @extend %font2;
+        font-size: small;
+        font-weight: normal;
+    }
+}
+
+.progress {
+    height: 10px;
+}
+
+hr {
+    width: 40px;
+    height: 2px;
+    @extend %bgc4;
+}
+
+p {
+    .skill {
+        font-weight: bold;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    &::selection {
+        color: $color1;
+        background-color: $color7;
+    }
+}
+
+.social-icons {
+    a {
+        padding: 5px;
+        color: $color1;
+        font-weight: bold;
+    }
+}
